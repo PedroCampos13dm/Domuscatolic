@@ -1,0 +1,1311 @@
+/* =====================================================
+   DOMUS CATÓLIC
+   ESTILO PRINCIPAL
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   FONTES
+   ----------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+
+
+/* -----------------------------------------------------
+   VARIÁVEIS
+   ----------------------------------------------------- */
+
+:root {
+
+    --preto: #090909;
+
+    --preto-suave: #10100f;
+
+    --painel: #141412;
+
+    --branco: #f5f1e8;
+
+    --cinza: #9b978f;
+
+    --cinza-claro: #c4bfb5;
+
+    --dourado: #c9a86a;
+
+    --linha: rgba(255,255,255,0.10);
+
+}
+
+
+
+/* -----------------------------------------------------
+   RESET
+   ----------------------------------------------------- */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--preto);
+
+    color: var(--branco);
+
+    font-family: "DM Sans", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+
+/* -----------------------------------------------------
+   CABEÇALHO
+   ----------------------------------------------------- */
+
+.cabecalho {
+
+    height: 80px;
+
+    padding: 0 6vw;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--linha);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(9,9,9,0.92);
+
+    backdrop-filter: blur(18px);
+
+}
+
+
+
+/* LOGO */
+
+.logo {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+}
+
+
+.logo span {
+
+    color: var(--dourado);
+
+    font-weight: 400;
+
+    letter-spacing: 0.05em;
+
+    margin-left: 5px;
+
+}
+
+
+
+/* MENU */
+
+.menu {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.menu a {
+
+    color: var(--cinza);
+
+    font-size: 12px;
+
+    transition: 0.25s;
+
+}
+
+
+.menu a:hover {
+
+    color: var(--dourado);
+
+}
+
+
+
+/* -----------------------------------------------------
+   HERO
+   ----------------------------------------------------- */
+
+.hero {
+
+    min-height: 78vh;
+
+    padding: 14vh 8vw 10vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+/* brilho discreto no fundo */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(201,168,106,0.10),
+        transparent 65%
+    );
+
+    top: -250px;
+
+    right: -150px;
+
+    pointer-events: none;
+
+}
+
+
+
+.hero-conteudo {
+
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+/* pequeno título */
+
+.mini-titulo {
+
+    color: var(--dourado);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.30em;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* título principal */
+
+.hero h1 {
+
+    font-size: clamp(
+        48px,
+        7vw,
+        92px
+    );
+
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero h1 em {
+
+    font-family: "Playfair Display", serif;
+
+    color: #d7cbb5;
+
+    font-weight: 500;
+
+}
+
+
+
+/* descrição */
+
+.descricao {
+
+    max-width: 550px;
+
+    color: var(--cinza);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* -----------------------------------------------------
+   BOTÃO
+   ----------------------------------------------------- */
+
+.botao {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 26px;
+
+    border: 1px solid var(--dourado);
+
+    color: var(--branco);
+
+    font-size: 11px;
+
+    letter-spacing: 0.16em;
+
+    transition: 0.3s;
+
+}
+
+
+.botao:hover {
+
+    background: var(--dourado);
+
+    color: #090909;
+
+}
+
+
+
+/* -----------------------------------------------------
+   COLEÇÃO
+   ----------------------------------------------------- */
+
+.colecao {
+
+    padding: 90px 6vw 120px;
+
+}
+
+
+
+/* cabeçalho da seção */
+
+.titulo-secao {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+
+}
+
+
+.titulo-secao h2 {
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.03em;
+
+}
+
+
+.titulo-secao > p {
+
+    max-width: 300px;
+
+    color: var(--cinza);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* -----------------------------------------------------
+   GRADE DAS ARTES
+   ----------------------------------------------------- */
+
+.grade-artes {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+
+/* -----------------------------------------------------
+   CARD
+   ----------------------------------------------------- */
+
+.card-arte {
+
+    display: block;
+
+    background: var(--painel);
+
+    border: 1px solid var(--linha);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.card-arte:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(201,168,106,0.55);
+
+}
+
+
+
+/* -----------------------------------------------------
+   IMAGEM DA ARTE
+   ----------------------------------------------------- */
+
+.imagem-arte {
+
+    aspect-ratio: 4 / 5;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #27251f,
+            #121210 65%,
+            #0b0b0b
+        );
+
+}
+
+
+.imagem-arte img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 12%;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.card-arte:hover
+.imagem-arte img {
+
+    transform: scale(1.04);
+
+}
+
+
+
+/* -----------------------------------------------------
+   OVERLAY
+   ----------------------------------------------------- */
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: flex-end;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            transparent 55%,
+            rgba(0,0,0,0.72)
+        );
+
+    opacity: 0;
+
+    transition: 0.3s;
+
+}
+
+
+.card-arte:hover .overlay {
+
+    opacity: 1;
+
+}
+
+
+.overlay span {
+
+    color: var(--dourado);
+
+    font-size: 10px;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+
+/* -----------------------------------------------------
+   INFORMAÇÕES DO CARD
+   ----------------------------------------------------- */
+
+.info-arte {
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: flex-start;
+
+}
+
+
+.numero {
+
+    color: var(--dourado);
+
+    font-size: 10px;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+.info-arte h3 {
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    margin-bottom: 5px;
+
+}
+
+
+.info-arte p {
+
+    color: var(--cinza);
+
+    font-size: 11px;
+
+}
+
+
+
+/* -----------------------------------------------------
+   SEÇÃO SOBRE
+   ----------------------------------------------------- */
+
+.sobre {
+
+    padding: 130px 8vw;
+
+    background: var(--preto-suave);
+
+}
+
+
+.sobre h2 {
+
+    font-size: clamp(
+        40px,
+        6vw,
+        72px
+    );
+
+    line-height: 1.04;
+
+    letter-spacing: -0.04em;
+
+    font-weight: 500;
+
+    margin-bottom: 28px;
+
+}
+
+
+.sobre h2 em {
+
+    font-family: "Playfair Display", serif;
+
+    color: #d7cbb5;
+
+}
+
+
+.sobre > p:last-child {
+
+    max-width: 570px;
+
+    color: var(--cinza);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* -----------------------------------------------------
+   PÁGINA INDIVIDUAL DA ARTE
+   ----------------------------------------------------- */
+
+#paginaArte {
+
+    padding-bottom: 100px;
+
+}
+
+
+
+/* -----------------------------------------------------
+   HERO DA ARTE
+   ----------------------------------------------------- */
+
+.pagina-arte {
+
+    padding: 70px 6vw 0;
+
+}
+
+
+
+/* voltar */
+
+.voltar {
+
+    display: inline-block;
+
+    color: var(--cinza);
+
+    font-size: 12px;
+
+    margin-bottom: 50px;
+
+    transition: 0.2s;
+
+}
+
+
+.voltar:hover {
+
+    color: var(--dourado);
+
+}
+
+
+
+/* -----------------------------------------------------
+   TÍTULO DA ARTE
+   ----------------------------------------------------- */
+
+.titulo-arte {
+
+    margin-bottom: 55px;
+
+}
+
+
+.titulo-arte h1 {
+
+    font-size: clamp(
+        45px,
+        6vw,
+        78px
+    );
+
+    font-weight: 500;
+
+    letter-spacing: -0.045em;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+
+}
+
+
+.titulo-arte h1 em {
+
+    font-family: "Playfair Display", serif;
+
+    color: #d7cbb5;
+
+}
+
+
+.titulo-arte p {
+
+    color: var(--cinza);
+
+    max-width: 560px;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+}
+
+
+
+/* -----------------------------------------------------
+   VISUAL PRINCIPAL
+   ----------------------------------------------------- */
+
+.visual-principal {
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr
+        0.75fr;
+
+    gap: 18px;
+
+    margin-bottom: 90px;
+
+}
+
+
+
+/* imagem grande */
+
+.mockup-principal {
+
+    min-height: 650px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #292721,
+            #11110f 65%,
+            #090909
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.mockup-principal img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 5%;
+
+}
+
+
+
+/* descrição lateral */
+
+.informacoes-arte {
+
+    padding: 45px;
+
+    background: var(--painel);
+
+    border: 1px solid var(--linha);
+
+}
+
+
+.informacoes-arte h2 {
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+}
+
+
+.informacoes-arte p {
+
+    color: var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+}
+
+
+.label {
+
+    color: var(--dourado);
+
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+/* -----------------------------------------------------
+   APLICAÇÕES
+   ----------------------------------------------------- */
+
+.aplicacoes {
+
+    margin-top: 40px;
+
+}
+
+
+.aplicacoes-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+.aplicacoes-header h2 {
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+}
+
+
+.aplicacoes-header p {
+
+    color: var(--cinza);
+
+    font-size: 12px;
+
+    margin-top: 8px;
+
+}
+
+
+
+/* -----------------------------------------------------
+   GRID DE MOCKUPS
+   ----------------------------------------------------- */
+
+.grade-mockups {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.mockup {
+
+    background: var(--painel);
+
+    border: 1px solid var(--linha);
+
+}
+
+
+.mockup-imagem {
+
+    aspect-ratio: 1 / 1.2;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #292721,
+            #11110f 68%
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.mockup-imagem img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 7%;
+
+}
+
+
+.mockup-info {
+
+    padding: 15px;
+
+}
+
+
+.mockup-info strong {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    margin-bottom: 5px;
+
+}
+
+
+.mockup-info span {
+
+    color: var(--cinza);
+
+    font-size: 10px;
+
+}
+
+
+
+/* -----------------------------------------------------
+   BLOCO DE APROVAÇÃO
+   ----------------------------------------------------- */
+
+.aprovacao {
+
+    margin-top: 80px;
+
+    padding: 55px;
+
+    border: 1px solid
+        rgba(201,168,106,0.30);
+
+    background:
+        linear-gradient(
+            135deg,
+            #15140f,
+            #0e0e0d
+        );
+
+}
+
+
+.aprovacao .mini-titulo {
+
+    margin-bottom: 15px;
+
+}
+
+
+.aprovacao h2 {
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+
+}
+
+
+.aprovacao p {
+
+    max-width: 650px;
+
+    color: var(--cinza);
+
+    line-height: 1.8;
+
+    font-size: 13px;
+
+}
+
+
+
+/* -----------------------------------------------------
+   RODAPÉ
+   ----------------------------------------------------- */
+
+footer {
+
+    padding: 35px 6vw;
+
+    border-top: 1px solid var(--linha);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: var(--cinza);
+
+    font-size: 11px;
+
+}
+
+
+footer strong {
+
+    color: var(--branco);
+
+    letter-spacing: 0.15em;
+
+    font-weight: 500;
+
+}
+
+
+
+/* -----------------------------------------------------
+   TABLET
+   ----------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+
+    .grade-artes {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .visual-principal {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .mockup-principal {
+
+        min-height: 550px;
+
+    }
+
+
+    .grade-mockups {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+/* -----------------------------------------------------
+   CELULAR
+   ----------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+
+    /* cabeçalho */
+
+    .cabecalho {
+
+        height: 70px;
+
+        padding: 0 5vw;
+
+    }
+
+
+    .menu {
+
+        gap: 15px;
+
+    }
+
+
+    .menu a {
+
+        font-size: 10px;
+
+    }
+
+
+
+    /* hero */
+
+    .hero {
+
+        min-height: 70vh;
+
+        padding:
+            10vh 7vw
+            8vh;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .descricao {
+
+        font-size: 13px;
+
+    }
+
+
+
+    /* coleção */
+
+    .colecao {
+
+        padding:
+            70px 5vw
+            90px;
+
+    }
+
+
+    .titulo-secao {
+
+        display: block;
+
+    }
+
+
+    .titulo-secao h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .titulo-secao > p {
+
+        margin-top: 12px;
+
+    }
+
+
+    .grade-artes {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    /* sobre */
+
+    .sobre {
+
+        padding:
+            90px 7vw;
+
+    }
+
+
+
+    /* página da arte */
+
+    .pagina-arte {
+
+        padding:
+            45px 5vw
+            0;
+
+    }
+
+
+    .titulo-arte h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .mockup-principal {
+
+        min-height: 430px;
+
+    }
+
+
+    .informacoes-arte {
+
+        padding: 30px;
+
+    }
+
+
+
+    /* mockups */
+
+    .grade-mockups {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .aprovacao {
+
+        padding: 30px;
+
+    }
+
+
+    .aprovacao h2 {
+
+        font-size: 24px;
+
+    }
+
+
+
+    /* footer */
+
+    footer {
+
+        display: block;
+
+    }
+
+
+    footer span {
+
+        display: block;
+
+        margin-top: 10px;
+
+    }
+
+  }
