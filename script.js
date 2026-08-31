@@ -12,7 +12,7 @@ const artes = {
             "Proposta visual desenvolvida para a coleção DOMUS Católic, trazendo Nossa Senhora do Rosário como elemento central da composição.",
 
         imagem:
-            "imagens/ARTE_NOSSA_SENHORA_DO_ROSÁRIO_Prancheta 1.png",
+            "ARTE_NOSSA_SENHORA_DO_ROSÁRIO_Prancheta 1.png",
 
         aplicacoes: {
 
@@ -57,7 +57,7 @@ const artes = {
             "Proposta visual inspirada na oração Ave Maria, desenvolvida para integrar a linguagem contemporânea da DOMUS Católic.",
 
         imagem:
-            "imagens/ARTE_AVE_MARIA_Prancheta 1.jpg",
+            "ARTE_AVE_MARIA_Prancheta 1.jpg",
 
         aplicacoes: {
 
@@ -102,7 +102,7 @@ const artes = {
             "Proposta visual dedicada a Nossa Senhora Aparecida, desenvolvida para a coleção DOMUS Católic.",
 
         imagem:
-            "imagens/ARTE_NOSSA_SENHORA_APARECIDA_01_Prancheta 1.png",
+            "ARTE_NOSSA_SENHORA_APARECIDA_01_Prancheta 1.png",
 
         aplicacoes: {
 
